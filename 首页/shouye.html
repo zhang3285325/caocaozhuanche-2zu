@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>曹操快车</title>
+	<style>
+	*{margin: 0;padding: 0;}
+	iframe{width: 100%;}
+	#box{width: 100%;height: 100%;position: relative;}
+	#pag1{width: 100%;height: 50%;}
+		.g1 img{width: 100%;height: 50%;}
+		.ziti{width: 100%;position: absolute;top: 220px;left: 0;}
+		.zt{width: 1200px;margin: 0 auto;}
+		.ziti h1{line-height: 112px;font-size: 80px;color: #242426;margin: 0;font-weight: 500;}
+		.zt p{font-size: 24px;color: #242426;line-height: 33px;}
+		.scan{margin-top: 45px;display: inline-block;width: 140px;}
+		.scan img{width: 140px;}
+	#pag2 {width: 100%;height: 715px;}
+		.pag2_1{padding: 140px 0;width: 1200px;margin: 0 auto;}
+		.pag2_left{width: 464px;text-align: justify;float: left;}
+		.pag2_1 h2{font-size: 60px;line-height: 84px;color: #08080e;font-weight: 400;}
+		.pag2_1 p{font-size: 24px;line-height: 40px;color: #9c9c9f;margin-top: 25px;}
+		.vd{width: 661px;float: left;margin-left: 72px;}
+		.vd video{height: 430px;}
+	#pag3{width: 100%;height:798px;background-color: #f8f8f9;padding: 140px 0;}
+		.pag3_1{width: 1200px;margin: 0 auto;}
+		.pag3_1 h2{font-size: 60px;line-height: 84px;color: #08080e;font-weight: 400;}
+		.pag3_1 p{font-size: 24px;line-height: 40px;color: #9c9c9f;margin-top: 15px;}
+		.pag3_1_1{justify-content: space-between;margin-top: 100px}
+		.pag3_1_01{float: left;width: 350px;height: 544px;}
+		.pag3_1_02{margin-left: 75px;}
+		.line{margin: 50px 0 20px;width: 40px;height: 2px;background: #c8c8c8;}
+		.pag3_1_01 h3{font-size: 36px;color: #08080e;line-height: 50px;font-weight: 400;}
+		.pag3_1_01 p{width: 320px;}
+	#pag4{width: 100%;height: 1062px;}
+		.pag4_1{width: 1200px;margin: 0 auto;padding-top: 140px;position: relative;}
+		.pag4_1 h2{font-size: 60px;line-height: 84px;color: #08080e;font-weight: 400;}
+		.pag4_1 .arrows{width: 58px;height: 68px;background-color: #f8f8f9;background-size: 39px auto;position: absolute;top: 70%;margin-top: -22px;z-index: 10;cursor: pointer;font-size: 50px;color: gray;padding-left: 10px;}
+		.aslf{left: 20px;}
+		.asrt{right: 20px;}
+		.pag4_1 .car{padding-top: 20px;}
+		.pag4_1 .car ul li{list-style: none;display: none;}
+		.pag4_1 .car ul li p{font-size: 24px;line-height: 40px;color: #9c9c9f;margin-top: 15px;}
+		.pag4_1 .car ul li img{margin-left: 250px;}
+		.pag4_1 .strip ul{width: 340px;display: block;margin:0 auto;margin-top: 60px;}
+		.pag4_1 .strip li{list-style: none;float: left;width: 90px;height: 2px;background: #c8c8c8;margin: 0 10px;}
+		.pag4_1 .strip .active{background: #00bb2c;}
+	#pag5{width: 100%;background: #00bb2c;height: 709px;}
+		.pag_5_1{width: 1200px;margin: 0 auto;padding-top: 50px;}
+		.pag_5_01{float: left;}
+		.pag_5_02{padding: 0 0 174px;width: 560px;float: left;margin-left: 20px;}
+		.pag_5_02_1{font-size: 24px;color: hsla(0,0%,100%,.5);margin-bottom: 1em;}
+		.pag_5_02_2{margin-top: 14px;margin-bottom: 0;font-size: 40px;color: #fff;line-height: 1;font-size: 76px;margin-right: 16px;}
+		.pag_5_02_2 span{margin-top: 16px;font-size: 40px;margin-right: 28px;}
+		.pag_5_02_3{margin-top: 16px;font-size: 20px;color: #fff;}
+		.pag_5_02_4{margin-top: 83px;font-size: 20px;color: hsla(0,0%,100%,.5);}
+	#pag6{width: 100%;background-color: #f8f8f9;}
+		.pag6_1{width: 1200px;margin: 0 auto;padding-top: 150px;}
+		.pag6_1 h2{font-size: 60px;line-height: 84px;color: #08080e;font-weight: 400;}
+		.pag6_1 p{font-size: 24px;line-height: 40px;color: #9c9c9f;margin-top: 15px;}
+		.pag6_1_1{margin-top: 70px;}
+		.pag6_left{margin-top: 40px;float: left;}
+		.pag6_left1 span{display: inline-block;}
+		.pag6_left1 span p{font-size: 48px;line-height: 67px;color: #00bb2c;margin-bottom: 0;}
+		.pag6_left1 span .num{font-size: 24px;line-height: 33px;color: #080809;}
+		.pag6_left1 i{width: 1px;height: 56px;background: #e5e5e5;margin: 0 26px 15px;}
+		.pag6_left a{cursor: pointer;display: block;padding: 20px 58px;background-color: #00bb2c;color: #fff;line-height: 40px;font-size: 28px;text-align: center;display: inline-block;text-decoration: none;}
+	</style>
+</head>
+<body>
+	
+</body>
+</html>
