@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>曹操快车</title>
+	<style>
+	*{margin: 0;padding: 0;}
+	iframe{width: 100%;}
+	#box{width: 100%;height: 100%;position: relative;}
+	#pag1{width: 100%;height: 50%;}
+		.g1 img{width: 100%;height: 50%;}
+		.ziti{width: 100%;position: absolute;top: 220px;left: 0;}
+		.zt{width: 1200px;margin: 0 auto;}
+		.ziti h1{line-height: 112px;font-size: 80px;color: #242426;margin: 0;font-weight: 500;}
+		.zt p{font-size: 24px;color: #242426;line-height: 33px;}
+		.scan{margin-top: 45px;display: inline-block;width: 140px;}
+		.scan img{width: 140px;}
+	#pag2 {width: 100%;height: 715px;}
+		.pag2_1{padding: 140px 0;width: 1200px;margin: 0 auto;}
+		.pag2_left{width: 464px;text-align: justify;float: left;}
+		.pag2_1 h2{font-size: 60px;line-height: 84px;color: #08080e;font-weight: 400;}
+		.pag2_1 p{font-size: 24px;line-height: 40px;color: #9c9c9f;margin-top: 25px;}
+		.vd{width: 661px;float: left;margin-left: 72px;}
+		.vd video{height: 430px;}
+	#pag3{width: 100%;height:798px;background-color: #f8f8f9;padding: 140px 0;}
+		.pag3_1{width: 1200px;margin: 0 auto;}
+		.pag3_1 h2{font-size: 60px;line-height: 84px;color: #08080e;font-weight: 400;}
+		.pag3_1 p{font-size: 24px;line-height: 40px;color: #9c9c9f;margin-top: 15px;}
+		.pag3_1_1{justify-content: space-between;margin-top: 100px}
+		.pag3_1_01{float: left;width: 350px;height: 544px;}
+		.pag3_1_02{margin-left: 75px;}
+		.line{margin: 50px 0 20px;width: 40px;height: 2px;background: #c8c8c8;}
+		.pag3_1_01 h3{font-size: 36px;color: #08080e;line-height: 50px;font-weight: 400;}
+		.pag3_1_01 p{width: 320px;}
+	#pag4{width: 100%;height: 1062px;}
+		.pag4_1{width: 1200px;margin: 0 auto;padding-top: 140px;position: relative;}
+		.pag4_1 h2{font-size: 60px;line-height: 84px;color: #08080e;font-weight: 400;}
+		.pag4_1 .arrows{width: 58px;height: 68px;background-color: #f8f8f9;background-size: 39px auto;position: absolute;top: 70%;margin-top: -22px;z-index: 10;cursor: pointer;font-size: 50px;color: gray;padding-left: 10px;}
+		.aslf{left: 20px;}
+		.asrt{right: 20px;}
+		.pag4_1 .car{padding-top: 20px;}
+		.pag4_1 .car ul li{list-style: none;display: none;}
+		.pag4_1 .car ul li p{font-size: 24px;line-height: 40px;color: #9c9c9f;margin-top: 15px;}
+		.pag4_1 .car ul li img{margin-left: 250px;}
+		.pag4_1 .strip ul{width: 340px;display: block;margin:0 auto;margin-top: 60px;}
+		.pag4_1 .strip li{list-style: none;float: left;width: 90px;height: 2px;background: #c8c8c8;margin: 0 10px;}
+		.pag4_1 .strip .active{background: #00bb2c;}
+	#pag5{width: 100%;background: #00bb2c;height: 709px;}
+		.pag_5_1{width: 1200px;margin: 0 auto;padding-top: 50px;}
+		.pag_5_01{float: left;}
+		.pag_5_02{padding: 0 0 174px;width: 560px;float: left;margin-left: 20px;}
+		.pag_5_02_1{font-size: 24px;color: hsla(0,0%,100%,.5);margin-bottom: 1em;}
+		.pag_5_02_2{margin-top: 14px;margin-bottom: 0;font-size: 40px;color: #fff;line-height: 1;font-size: 76px;margin-right: 16px;}
+		.pag_5_02_2 span{margin-top: 16px;font-size: 40px;margin-right: 28px;}
+		.pag_5_02_3{margin-top: 16px;font-size: 20px;color: #fff;}
+		.pag_5_02_4{margin-top: 83px;font-size: 20px;color: hsla(0,0%,100%,.5);}
+	#pag6{width: 100%;background-color: #f8f8f9;}
+		.pag6_1{width: 1200px;margin: 0 auto;padding-top: 150px;}
+		.pag6_1 h2{font-size: 60px;line-height: 84px;color: #08080e;font-weight: 400;}
+		.pag6_1 p{font-size: 24px;line-height: 40px;color: #9c9c9f;margin-top: 15px;}
+		.pag6_1_1{margin-top: 70px;}
+		.pag6_left{margin-top: 40px;float: left;}
+		.pag6_left1 span{display: inline-block;}
+		.pag6_left1 span p{font-size: 48px;line-height: 67px;color: #00bb2c;margin-bottom: 0;}
+		.pag6_left1 span .num{font-size: 24px;line-height: 33px;color: #080809;}
+		.pag6_left1 i{width: 1px;height: 56px;background: #e5e5e5;margin: 0 26px 15px;}
+		.pag6_left a{cursor: pointer;display: block;padding: 20px 58px;background-color: #00bb2c;color: #fff;line-height: 40px;font-size: 28px;text-align: center;display: inline-block;text-decoration: none;}
+	</style>
+</head>
+<body>
+	<iframe src="../公用头部底部/header.html" frameborder="0" scrolling="no" style="position: fixed;z-index:999;"></iframe>
+	<div id="box">
+		<div id="pag1">
+			<div class="g1"><img src="img/g1.jpg" alt=""></div>
+			<div class="ziti">
+				<div class="zt">
+					<h1>旅途中的伴侣</h1>
+					<p>曹操新能源，自在出行</p>
+					<div class="scan">
+						<p style="background: rgb(255, 255, 255); position: relative; margin: 0px;"><img src="img/g2.jpg" alt=""></p>
+						<p style="background: rgb(0, 187, 44); line-height: 24px; text-align: center; font-size: 14px; color: rgb(255, 255, 255);">快速扫码 闪电体验</p>
+					</div>
+				</div>
+					
+			</div>
+		</div>
+		<div id="pag2">
+			<div class="pag2_1">
+				<div class="pag2_left">
+					<h2>关于曹操</h2>
+					<p>曹操出行是由世界500强车企吉利集团布局“新能源汽车共享生态”的战略性投资业务，秉持“低碳致尚、服务至上”的核心价值观，将全球领先的互联网、车联网、自动驾驶技术以及新能源科技， 创新应用于共享出行领域，致力于为用户创造和提供一站式的健康、低碳、共享出行生活方式</p>
+				</div>
+				<!-- <div class="vd"><video src="img/g3.mp4" clntrols width="100%"></video></div> -->
+				<div class="vd"><video src="img/g3.mp4" width="100%" controls="controls" poster="img/g12.png"></video></div>
+			</div>
+		</div>
+		<div id="pag3">
+			<div class="pag3_1">
+				<h2>少些担心 多份安心</h2>
+				<p>曹操新能源，节能环保，5座300万保险，安全可靠；贴心服务，打车不排队，雨天不着急</p>
+				<div class="pag3_1_1">
+					<div class="pag3_1_01">
+						<img src="img/g4.png" alt="">
+						<div class="line"></div>
+						<h3>安全出行<br>曹操专车</h3>
+						<p>高峰雨天不溢价，分时段动态折扣，价格更实惠</p>
+					</div>
+					<div class="pag3_1_01 pag3_1_02">
+						<img src="img/g5.png" alt="">
+						<div class="line"></div>
+						<h3>高端商务<br>绿色公务</h3>
+						<p>自营车辆，安全可靠，专业司机，服务至上</p>
+					</div>
+					<div class="pag3_1_01 pag3_1_02">
+						<img src="img/g6.png" alt="">
+						<div class="line"></div>
+						<h3>贴心服务<br>曹操帮忙</h3>
+						<p>同城取送无烦恼，曹操专车，随叫随到</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="pag4">
+			<div class="pag4_1">
+				<h2>车型可选</h2>
+				<div class="">
+					<div class="arrows aslf">←</div>
+					<div class="arrows asrt">→</div>
+				</div>
+				<div class="car">
+					<ul>
+						<li style="display: block;">
+							<p>乘坐新能源汽车，零油耗、零污染、零噪音、零排放,是百分百绿色交通工具</p>
+							<img src="img/g8.png" alt="">
+						</li>
+						<li>
+							<p>提供更加舒适的环境，小资生活的出行体验</p>
+							<img src="img/g7.png" alt="">
+						</li>
+						<li>
+							<p>无论是商务还是休闲,都可以提供一个方便优质奢华的乘车体验</p>
+							<img src="img/g9.png" alt="">
+						</li>
+					</ul>
+				</div>
+				<div class="strip">
+					<ul>
+						<li class="active"></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="pag5">
+			<div class="pag_5_1">
+				<div class="pag_5_01"><img src="img/g10.png" alt=""></div>
+				<div class="pag_5_02">
+					<p class="pag_5_02_1">曹操碳银行</p>
+					<div>
+						<p class="pag_5_02_2">1<span>公里 =</span>142<span>克碳减排量</span></p>
+						<p class="pag_5_02_3">坐曹操纯电动车，低碳出行，一起守护中国蓝</p>
+						<p class="pag_5_02_4">您的每一次出行都在积累碳资产</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="pag6">
+			<div class="pag6_1">
+				<h2>司机招募</h2>
+				<p style="width: 792px;">杭州、北京、上海、广州、深圳、天津、重庆、南京、成都、武汉、长沙、哈尔滨、西安、兰州、太原、厦门、宁波、大连、青岛、苏州、营口、金华、佛山、无锡、常德，更多城市开通中...</p>
+				<div class="pag6_1_1">
+					<div class="pag6_left">
+						<div class="pag6_left1">
+							<span><p>25+</p><p class="num">开通城市</p></span>
+							<i></i>
+							<span><p>20000+</p><p class="num">最近加入司机</p></span>
+						</div>
+						<a href="" style="margin-top: 50px;">加入我们</a>
+					</div>
+					<div class="pag6_1_2">
+						<img src="img/g11.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<iframe src="../公用头部底部/foot.html" frameborder="0" scrolling="no" style="z-index:999;height: 510px;margin-top: 50px;"></iframe>
+</body>
+</html>
