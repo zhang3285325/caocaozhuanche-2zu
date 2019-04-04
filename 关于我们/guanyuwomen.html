@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/guanyuwomen.css">
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/guanyuwomen.js"></script>
+
 </head>
 <body>
 	<iframe src="../公用头部底部/header.html" frameborder="0" scrolling="no" style="height: 100px;position: fixed;z-index: 999;"></iframe>
@@ -20,65 +23,67 @@
 			<h2 class="licheng">公司历程</h2>
 			<div class="centent2-1">
 				<!-- 上箭头 -->
-				<div class="jiantou"><img src="img/m-17 (1).png" alt=""></div>
+				<div class="jiantou" id="prev"><img src="img/m-17 (1).png" alt=""></div>
 				<div class="centent2-1_left">
 					<div class="cleft1">
 						<h2>2015</h2>
 						<h1>05.21</h1>
 						<p>曹操专车成立</p>
 					</div>
-					<div class="cleft2">
+					<div class="cleft1">
 						<h2>2016</h2>
 						<h1>01.01</h1>
 						<p>杭州上线</p>
 					</div>
-					<div class="cleft3">
+					<div class="cleft1">
 						<h2>2017</h2>
 						<h1>02.28</h1>
 						<p>曹操专车获得首张新能源汽车网约车牌照，由浙江省交通运输厅下发，服务区域为全国。</p>
 					</div>
-					<div class="cleft4">
+					<div class="cleft1">
 						<h2>2018</h2>
 						<h1>02.01</h1>
 						<p>获评浙江省近零碳排放低碳试点企业</p>
 					</div>
 				</div>
 				<!-- 下箭头 -->
-				<div class="jiantou"><img src="img/m-17 (2).png" alt=""></div>
+				<div class="jiantou" id="next"><img src="img/m-17 (2).png" alt=""></div>
 				<div class="centent2-1_right">
 					<!-- <svg style="border: 1px solid red;width: 500px;height: 500px;"></svg> -->
 					<svg width="100%" height="100%" version="2" xmlns="http://www.w3.org/2000/svg">
 						<circle cx="340" cy="280" r="250" stroke="blue"
-						stroke-width="2" fill="none" style="overflow: hidden;"/>
-							<img src="img/m2.jpg" alt="">
-							<img src="img/m3.jpg" alt="">
-							<img src="img/m4.jpg" alt="">
-							<img src="img/m5.jpg" alt="">
+						stroke-width="2" fill="none"/>
+						<div>
+							<img src="img/m2.jpg" alt="" class="img">
+							<img src="img/m3.jpg" alt="" class="img">
+							<img src="img/m4.jpg" alt="" class="img">
+							<img src="img/m5.jpg" alt="" class="img">
+						</div>
 						</circle>
 					</svg>
 					<svg style="position: absolute;top: 25px;right: 250px;">
 						<circle cx="200" cy="70" r="7" stroke="blue"
-						stroke-width="2" fill="blue"/>
+						stroke-width="2" fill="blue" class="circle"/>
 						</circle>
-						<span style="position: absolute;top: 50px;right: 330px;">2018</span>
+						<span style="position: absolute;top: 50px;right: 330px;">2015</span>
 					</svg>
 					<svg style="position: absolute;top: 165px;right: 36px;">
 						<circle cx="200" cy="70" r="7" stroke="blue"
-						stroke-width="2" fill="blue"/>
+						stroke-width="2" fill="blue" class="circle"/>
 						</circle>
-						<span style="position: absolute;top: 220px;right: 70px;">2017</span>
+						<span style="position: absolute;top: 220px;right: 70px;">2016</span>
 					</svg>
 					<svg style="position: absolute;top: 405px;right: 46px;">
 						<circle cx="200" cy="70" r="7" stroke="blue"
-						stroke-width="2" fill="blue"/>
+						stroke-width="2" fill="blue" class="circle"/>
 						</circle>
-						<span style="position: absolute;top: 470px;right: 80px;">2016</span>
+						<span style="position: absolute;top: 470px;right: 80px;">2017</span>
 					</svg>
 					<svg style="position: absolute;top: 525px;right: 250px;">
 						<circle cx="200" cy="70" r="7" stroke="blue"
-						stroke-width="2" fill="blue"/>
+						stroke-width="2" fill="blue" class="circle"/>
 						</circle>
-						<span style="position: absolute;top: 620px;right: 330px;">2015</span>
+						<span style="position: absolute;top: 620px;right: 330px;">2018</span>
 					</svg>
 				</div>
 			</div>
@@ -86,7 +91,7 @@
 		<div class="centent3">
 			<h2>新闻中心</h2>
 			<div>
-				<table>
+				<table class="table1">
 					<tr>
 						<td><a href="">
 							<img src="img/m6.jpg" alt="">
@@ -122,7 +127,39 @@
 						</a></td>
 					</tr>
 				</table>
+				<table style="display: none;" class="table2">
+					<tr>
+						<td><a href="">
+							<img src="img/m12.jpg" alt="">
+							<p>上海合作组织青岛峰会闭幕 曹操专车圆满完成出行保障工作</p>
+							<span>2018/06/12</span>
+						</a></td>
+						<td><a href="">
+							<img src="img/m6.jpg" alt="">
+							<p>曹操专车三周年回顾：不忘初心，共享出行</p>
+							<span>2018/05/21</span>
+						</a></td>
+						<td><a href="">
+							<img src="img/m14.jpg" alt="">
+							<p>杭州官方榜单发布“独角兽”是怎样练成的？</p>
+							<span>2018/03/14</span>
+						</a></td>
+					</tr>
+					<tr>
+						<td><a href="">
+							<img src="img/m8.jpg" alt="">
+							<p>曹操专车上线“低碳U品” 一箩筐礼品等你来换！</p>
+							<span>2017/08/03</span>
+						</a></td>
+					</tr>
+				</table>
 			</div>
+			<p style="position: absolute;left:520px;top: 900px;">
+				<span class="span1"><</span>
+				<span class="span1 select">1</span>
+				<span class="span1">2</span>
+				<span class="span1">></span>
+			</p>
 		</div>
 		<div class="centent4">
 			<div class="centent4_1">
@@ -138,7 +175,6 @@
 					<img src="img/m16.png" alt="">
 				</div>
 			</div>
-			
 		</div>
 	</div>
 	<iframe src="../公用头部底部/foot.html" frameborder="0" scrolling="no" style="height: 500px;margin-top: 150px;"></iframe>

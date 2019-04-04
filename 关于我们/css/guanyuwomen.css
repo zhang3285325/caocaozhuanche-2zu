@@ -16,14 +16,17 @@ iframe{width: 100%;}
 #centent .centent2 .centent2-1_left h1{color: green;font-size: 140px;line-height: 140px;}
 #centent .centent2 .centent2-1_left p{color: #9c9c9f;text-align: justify;font-size: 24px;}
 #centent .centent2 .centent2-1_right{width: 600px;height:600px;margin-left: 500px;margin-top: -600px;}
-
 #centent .centent2 .centent2-1_right img{width: 450px;height: 450px;border-radius: 50%;position: absolute;left: 615px;top: 125px;}
-#centent .centent3{width: 1200px;margin:0 auto;}
+#centent .centent2 .centent2-1_right .circle{cursor: pointer;}
+#centent .centent3{width: 1200px;margin:0 auto;position: relative;height:1000px;}
 #centent .centent3 td{padding:20px;}
 #centent .centent3 img{width: 350px;height: 240px;}
 #centent .centent3 a{text-decoration: none;}
+#centent .centent3 .span1{display:inline-block;width: 30px;height: 30px;border:2px solid #d9d9d9;line-height: 30px;text-align: center;color:black;cursor: pointer;}
+#centent .centent3 .span1:hover{border:2px solid green;}
 #centent .centent3 p{width: 350px;font-size: 22px;line-height: 32px;color:#08080e;margin-top: 30px;text-align: justify;}
 #centent .centent3 span{font-size: 20px;line-height: 32px;color: #9c9c9f;margin-top: 20px;}
+#centent .centent3 .select{color:white;background: green;border:2px solid green;}
 #centent .centent4{width: 100%;background: #f8f8f9;position: relative;height: 450px;}
 #centent .centent4 .centent4_1{width: 1200px;margin:0 auto;}
 #centent .centent4 .centent4_1 h2{font-size: 60px;line-height: 84px;color: #08080e;font-weight: 400;}
