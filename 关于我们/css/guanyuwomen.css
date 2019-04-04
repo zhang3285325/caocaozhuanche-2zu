@@ -1,0 +1,32 @@
+*{margin: 0;padding: 0;}
+iframe{width: 100%;}
+.fr{float: left;}
+#centent{position: relative;top: 100px;}
+#centent .centent1{position: absolute;top: 120px;left: 0;width: 100%;}
+#centent .centent1 .centent1-1{width: 1200px;margin: 0 auto;}
+#centent .centent1 .centent1-1 h1{font-size: 80px;}
+#centent .centent1 .centent1-1 p{font-size: 24px;}
+#centent .centent1 .centent1-1 div{font-size: 20px;color: rgb(36, 36, 38);text-align: justify;}
+#centent .centent2{width: 1200px;margin:0 auto;margin-bottom: 20px;position: relative;background: #f8f8f9;}
+#centent .centent2 .jiantou{width: 60px;height:60px;border: 3px solid skyblue;border-radius: 50%;margin: 50px 0 50px 150px;line-height: 60px;cursor: pointer;}
+#centent .centent2 .jiantou img{width: 60px;}
+#centent .centent2 .licheng{font-size: 60px;line-height: 84px;font-weight: 400;color: black;}
+#centent .centent2 .centent2-1_left{width: 460px;height: 250px;overflow: hidden;margin-left: 100px;}
+#centent .centent2 .centent2-1_left h2{color: green;font-size: 80px;line-height: 80px;padding-left: 5px;}
+#centent .centent2 .centent2-1_left h1{color: green;font-size: 140px;line-height: 140px;}
+#centent .centent2 .centent2-1_left p{color: #9c9c9f;text-align: justify;font-size: 24px;}
+#centent .centent2 .centent2-1_right{width: 600px;height:600px;margin-left: 500px;margin-top: -600px;}
+
+#centent .centent2 .centent2-1_right img{width: 450px;height: 450px;border-radius: 50%;position: absolute;left: 615px;top: 125px;}
+#centent .centent3{width: 1200px;margin:0 auto;}
+#centent .centent3 td{padding:20px;}
+#centent .centent3 img{width: 350px;height: 240px;}
+#centent .centent3 a{text-decoration: none;}
+#centent .centent3 p{width: 350px;font-size: 22px;line-height: 32px;color:#08080e;margin-top: 30px;text-align: justify;}
+#centent .centent3 span{font-size: 20px;line-height: 32px;color: #9c9c9f;margin-top: 20px;}
+#centent .centent4{width: 100%;background: #f8f8f9;position: relative;height: 450px;}
+#centent .centent4 .centent4_1{width: 1200px;margin:0 auto;}
+#centent .centent4 .centent4_1 h2{font-size: 60px;line-height: 84px;color: #08080e;font-weight: 400;}
+#centent .centent4 .centent4_1 .hangz{margin-top: 50px;font-size: 24px;line-height: 33px;color: #535357;}
+#centent .centent4 .centent4_1 .dizhi{margin-top: 30px;font-size: 24px;line-height: 33px;color: #989a9c;}
+#centent .centent4 .centent4_1 .ditu{position: absolute;left: 700px;top: 100px;}
