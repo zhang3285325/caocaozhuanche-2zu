@@ -33,16 +33,17 @@
 		.pag3_1_01 h3{font-size: 36px;color: #08080e;line-height: 50px;font-weight: 400;}
 		.pag3_1_01 p{width: 320px;}
 	#pag4{width: 100%;height: 1062px;}
-		.pag4_1{width: 1200px;margin: 0 auto;padding-top: 140px;position: relative;}
+		.pag4_1{width: 1200px;height: 700px;margin: 0 auto;padding-top: 140px;position: relative;}
 		.pag4_1 h2{font-size: 60px;line-height: 84px;color: #08080e;font-weight: 400;}
-		.pag4_1 .arrows{width: 58px;height: 68px;background-color: #f8f8f9;background-size: 39px auto;position: absolute;top: 70%;margin-top: -22px;z-index: 10;cursor: pointer;font-size: 50px;color: gray;padding-left: 10px;}
+		.pag4_1 .arrows{width: 58px;height: 68px;background-color: #f8f8f9;background-size: 39px auto;position: absolute;top: 65%;margin-top: -22px;z-index: 888;cursor: pointer;font-size: 50px;color: gray;padding-left: 10px;}
 		.aslf{left: 20px;}
 		.asrt{right: 20px;}
-		.pag4_1 .car{padding-top: 20px;}
-		.pag4_1 .car ul li{list-style: none;display: none;}
+		.pag4_1 .car{padding-top: 20px;height: 700px;overflow: hidden;width: 1200px;position: absolute;}
+		.pag4_1 .car ul {position: absolute;width: 3600px;height: 560px;}
+		.pag4_1 .car ul li{list-style: none;float: left;width: 1200px;}
 		.pag4_1 .car ul li p{font-size: 24px;line-height: 40px;color: #9c9c9f;margin-top: 15px;}
 		.pag4_1 .car ul li img{margin-left: 250px;}
-		.pag4_1 .strip ul{width: 340px;display: block;margin:0 auto;margin-top: 60px;}
+		.pag4_1 .strip ol{width: 340px;display: block;margin:0 auto;top: 870px;position: absolute;left: 30%;}
 		.pag4_1 .strip li{list-style: none;float: left;width: 90px;height: 2px;background: #c8c8c8;margin: 0 10px;}
 		.pag4_1 .strip .active{background: #00bb2c;}
 	#pag5{width: 100%;background: #00bb2c;height: 709px;}
@@ -120,16 +121,17 @@
 				</div>
 			</div>
 		</div>
+		<!-- 轮播 -->
 		<div id="pag4">
 			<div class="pag4_1">
 				<h2>车型可选</h2>
 				<div class="">
-					<div class="arrows aslf">←</div>
-					<div class="arrows asrt">→</div>
+					<div class="arrows aslf" id="left">←</div>
+					<div class="arrows asrt" id="right">→</div>
 				</div>
 				<div class="car">
-					<ul>
-						<li style="display: block;">
+					<ul id="ul">
+						<li>
 							<p>乘坐新能源汽车，零油耗、零污染、零噪音、零排放,是百分百绿色交通工具</p>
 							<img src="img/g8.png" alt="">
 						</li>
@@ -144,11 +146,11 @@
 					</ul>
 				</div>
 				<div class="strip">
-					<ul>
+					<ol id="ol">
 						<li class="active"></li>
 						<li></li>
 						<li></li>
-					</ul>
+					</ol>
 				</div>
 			</div>
 		</div>
@@ -186,5 +188,89 @@
 		</div>
 	</div>
 	<iframe src="../公用头部底部/foot.html" frameborder="0" scrolling="no" style="z-index:999;height: 510px;margin-top: 50px;"></iframe>
+	<script>
+		// 左右箭头
+		var car = document.getElementsByClassName('car')
+		var right = document.querySelector("#right");
+		var left = document.querySelector("#left");
+		// 小汽车图片
+		var ul = document.getElementById("ul");
+		// 小汽车下所有ul下的li
+		var aimg = ul.children;
+		// 下面小长条
+		var ol = document.getElementById("ol");
+		// 下面所有小长条
+		var ali = ol.children;
+		var timer=null;
+		var now = 0; //当前now值     now是小方块的索引值     
+   		var key = 0; //另一个索引值     key是图片的索引值 
+   		var time; 
+   		time = setInterval(next,1000);
+	//小长条的切换
+	function tabli(){
+		for (var i = 0; i < ali.length; i++) {
+			ali[i].className='';
+		}
+		ali[now].className='active';
+	}
+	//left左点击
+		left.onclick=function(){
+			clearInterval(time);
+			now--;
+			if (now==-1) {
+                now=aimg.length-1;
+            }
+			tab();
+			tabli();
+		}
+		//右点击
+	   
+		right.onclick=function(){
+			clearInterval(time);
+			next();
+		}
+		function next(){
+			now++;
+			if (now==aimg.length) {
+                now=0;
+            }
+			tab();
+			tabli();
+		}
+		var time2=null;
+	   function tab(){
+	   	  	    for (var i = 0; i < aimg.length; i++) {
+					aimg[i].className='';                  
+				}
+                aimg[now].className='selected';
+              var start=ul.offsetLeft; //开始位置:注意开始位置是变化的
+               var dis=(-aimg[0].offsetWidth)*now-start;//移动距离*/
+              
+               var count=20; //总步数
+               var num=0;//计数器
+               clearInterval(time2);//每次运动时把上次定时器清除,否则会累加,速度加快
+               time2=setInterval(function(){
+                     num++;
+                  //每一步需要走多远:  dis*num/count
+                  //开始位置要累加start
+                  ul.style.left=start+dis*num/count+'px';
+                  if(num==count){
+                   	clearInterval(time2);
+                  }
+               },30)
+                 //左右滑动代码提炼
+               /* move(oimgs[0], -oimgwrap.offsetWidth*now);*/
+	   }
+	   ul.onmouseover = function () {
+	   	console.log(111)
+      		clearInterval(time);
+
+   		}
+	   ul.onmouseout = function () {
+	      time = setInterval(function(){
+            next();
+        },1000)
+	   }
+	</script>
 </body>
 </html>
