@@ -36,6 +36,7 @@ $(function(){
 		console.log(index)
 		showFn()
 	})
+	clearInterval(time)
 	time = setInterval(function(){
 		prev();
 	},2000)
